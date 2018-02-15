@@ -18,8 +18,7 @@ function addDropdown() {
   
   // put list of sample names into an array
   sampleNames = [];
-  // queryURL = 'https://herokuapp.com/names';
-  queryURL = 'http://localhost:5000/names';
+  queryURL = 'https://hidden-scrubland-26732.herokuapp.com/names';
   // Take response and assign to sampleNames array
   d3.json(queryURL, function (error, response) {
     if (error) {
@@ -118,8 +117,8 @@ function updatePlots(newdata) {
   otuDescAll  = [];
 
   // Get the otu_id 
-  // queryURL = 'https://herokuapp.com/otu';
-  queryURL = 'http://localhost:5000/otu';
+  queryURL = 'https://hidden-scrubland-26732.herokuapp.com/otu';
+ 
 
   d3.json(queryURL, function (error, response) {
     otuDescAll = response;
@@ -253,8 +252,7 @@ function optionChanged(selectedOption) {
     console.log("inside optionChanged()");
 
     // Get metadata information for the specific sample from the metadata url/endpoint
-    // queryURL1 = 'https://herokuapp.com/metadata/' + selectedOption;
-    queryURL1 = 'http://localhost:5000/metadata/' + selectedOption;
+    queryURL1 = 'https://hidden-scrubland-26732.herokuapp.com/metadata/' + selectedOption;
     metaDataInfo = "";
   
     d3.json(queryURL1, function (error, response) {
@@ -280,8 +278,7 @@ function optionChanged(selectedOption) {
 
   // Get list of otu_id's and sample_count  
   
-  // queryURL2 = 'https://herokuapp.com/samples/' + selectedOption;
-  queryURL2 = 'http://localhost:5000/samples/' + selectedOption;
+  queryURL2 = 'https://hidden-scrubland-26732.herokuapp.com/samples/' + selectedOption;
   otuIdAndSampleCount = [];
 
   d3.json(queryURL2, function (error, response) {
@@ -298,8 +295,7 @@ function optionChanged(selectedOption) {
 
 
   // Get washing frequency for the sample
-  // queryURL3 = 'https://herokuapp.com/wfreq/' + selectedOption;
-  queryURL3 = 'http://localhost:5000/wfreq/' + selectedOption;
+  queryURL3 = 'https://hidden-scrubland-26732.herokuapp.com/wfreq/' + selectedOption;
   washFreq = "";
 
   d3.json(queryURL3, function (error, response) {
